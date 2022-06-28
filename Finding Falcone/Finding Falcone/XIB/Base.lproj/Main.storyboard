@@ -1,8 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zau-Hy-SNr">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Finding Falcone!-->
+        <scene sceneID="DZp-1M-u5V">
+            <objects>
+                <viewController id="NQL-Ni-C0S" customClass="HomeScreenViewController" customModule="Finding_Falcone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ERQ-Aw-3Ab">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOY-Gj-1wG">
+                                <rect key="frame" x="5" y="49" width="310" height="25"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Select planets you want to search in:">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="18" name="AvenirNext-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TdN-gW-hOb">
+                                <rect key="frame" x="0.0" y="74" width="320" height="424"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SetParamsForSearchTableViewCell" id="9pk-C4-sm4" customClass="SetParamsForSearchTableViewCell" customModule="Finding_Falcone" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="49.5" width="288" height="165.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9pk-C4-sm4" id="8bD-EQ-d5d">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="165.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0sk-0H-Mya">
+                                                    <rect key="frame" x="0.0" y="5" width="288" height="155.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RM-Ps-4cz">
+                                                            <rect key="frame" x="0.0" y="0.0" width="283" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="89Q-K4-bNt"/>
+                                                            </constraints>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Select Destination">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cL8-rT-LNm">
+                                                            <rect key="frame" x="0.0" y="25" width="283" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="I0b-9P-dQU"/>
+                                                            </constraints>
+                                                        </pickerView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIr-qm-elh">
+                                                            <rect key="frame" x="0.0" y="80.5" width="283" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="mJD-LJ-9qs"/>
+                                                            </constraints>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Select Vehicle">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="18" name="Avenir-Medium"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEG-gr-ipK">
+                                                            <rect key="frame" x="0.0" y="105.5" width="283" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="LnX-La-yeb"/>
+                                                            </constraints>
+                                                        </pickerView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="cL8-rT-LNm" secondAttribute="trailing" constant="5" id="Osp-Co-CTu"/>
+                                                        <constraint firstAttribute="trailing" secondItem="gEG-gr-ipK" secondAttribute="trailing" constant="5" id="qMe-Zf-Tz7"/>
+                                                        <constraint firstAttribute="trailing" secondItem="0RM-Ps-4cz" secondAttribute="trailing" constant="5" id="uNP-H2-qd2"/>
+                                                        <constraint firstAttribute="trailing" secondItem="iIr-qm-elh" secondAttribute="trailing" constant="5" id="w5e-EZ-SQF"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="0sk-0H-Mya" secondAttribute="trailing" id="H7P-ic-7r0"/>
+                                                <constraint firstAttribute="bottom" secondItem="0sk-0H-Mya" secondAttribute="bottom" constant="5" id="Sqv-zV-83N"/>
+                                                <constraint firstItem="0sk-0H-Mya" firstAttribute="leading" secondItem="8bD-EQ-d5d" secondAttribute="leading" id="mRQ-0F-fDO"/>
+                                                <constraint firstItem="0sk-0H-Mya" firstAttribute="top" secondItem="8bD-EQ-d5d" secondAttribute="top" constant="5" id="zMB-G0-3AP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="selectDestinationLabel" destination="0RM-Ps-4cz" id="NuA-Jj-vUO"/>
+                                            <outlet property="selectDestinationPickerView" destination="cL8-rT-LNm" id="cMq-Hf-h20"/>
+                                            <outlet property="selectVehicleLabel" destination="iIr-qm-elh" id="B2W-8D-Kqf"/>
+                                            <outlet property="selectVehiclePickerView" destination="gEG-gr-ipK" id="Tux-Ri-cvu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="NQL-Ni-C0S" id="rTv-h4-pev"/>
+                                    <outlet property="delegate" destination="NQL-Ni-C0S" id="3FP-IH-3r4"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7D-SX-9go">
+                                <rect key="frame" x="0.0" y="498" width="320" height="70"/>
+                                <color key="backgroundColor" red="0.94999999999999996" green="0.96999999999999997" blue="0.97999999999999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="bCf-dS-cZd"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Find Falcone!">
+                                            <attributes>
+                                                <font key="NSFont" size="13" name="AvenirNext-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LEr-2p-8YI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="X7D-SX-9go" firstAttribute="leading" secondItem="ERQ-Aw-3Ab" secondAttribute="leading" id="3UB-Nv-5yA"/>
+                            <constraint firstAttribute="trailing" secondItem="TdN-gW-hOb" secondAttribute="trailing" id="49d-Lg-plG"/>
+                            <constraint firstItem="iOY-Gj-1wG" firstAttribute="leading" secondItem="LEr-2p-8YI" secondAttribute="leading" constant="5" id="BLl-cc-qLo"/>
+                            <constraint firstItem="X7D-SX-9go" firstAttribute="top" secondItem="TdN-gW-hOb" secondAttribute="bottom" id="GNL-vV-PSb"/>
+                            <constraint firstAttribute="trailing" secondItem="X7D-SX-9go" secondAttribute="trailing" id="K82-cX-lk3"/>
+                            <constraint firstAttribute="bottom" secondItem="X7D-SX-9go" secondAttribute="bottom" id="RuC-2S-1my"/>
+                            <constraint firstItem="TdN-gW-hOb" firstAttribute="leading" secondItem="LEr-2p-8YI" secondAttribute="leading" id="STu-Sr-arQ"/>
+                            <constraint firstItem="LEr-2p-8YI" firstAttribute="trailing" secondItem="iOY-Gj-1wG" secondAttribute="trailing" constant="5" id="a5A-Eh-vXB"/>
+                            <constraint firstItem="iOY-Gj-1wG" firstAttribute="top" secondItem="LEr-2p-8YI" secondAttribute="top" constant="5" id="aIx-Tq-Own"/>
+                            <constraint firstItem="TdN-gW-hOb" firstAttribute="top" secondItem="iOY-Gj-1wG" secondAttribute="bottom" id="don-NG-daS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Finding Falcone!" largeTitleDisplayMode="always" id="Kls-nP-fVb"/>
+                    <connections>
+                        <outlet property="tableView" destination="TdN-gW-hOb" id="D68-Iq-QwN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hjw-F9-1Ao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1138.125" y="170.07042253521126"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hSG-cW-PD4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zau-Hy-SNr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t0s-uZ-bWx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NQL-Ni-C0S" kind="relationship" relationship="rootViewController" id="YAo-uw-zEo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CCA-HX-nWn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.625" y="170.07042253521126"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
