@@ -32,6 +32,7 @@
 		03B402D8286C67D7001D8032 /* TokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402D7286C67D7001D8032 /* TokenService.swift */; };
 		03B402DC286C6BCA001D8032 /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402DB286C6BCA001D8032 /* KeyChainManager.swift */; };
 		03B402DE286C6C75001D8032 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402DD286C6C75001D8032 /* AppConstants.swift */; };
+		03B402E0286C7E79001D8032 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402DF286C7E79001D8032 /* ProgressHUD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		03B402D7286C67D7001D8032 /* TokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenService.swift; sourceTree = "<group>"; };
 		03B402DB286C6BCA001D8032 /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
 		03B402DD286C6C75001D8032 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		03B402DF286C7E79001D8032 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 				03527924286B2D8800A6CD9D /* AppEnums.swift */,
 				03B402DB286C6BCA001D8032 /* KeyChainManager.swift */,
 				03B402DD286C6C75001D8032 /* AppConstants.swift */,
+				03B402DF286C7E79001D8032 /* ProgressHUD.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				03527923286B2AB200A6CD9D /* AppError.swift in Sources */,
 				03527913286B232500A6CD9D /* CoreDataManager.swift in Sources */,
 				03527925286B2D8800A6CD9D /* AppEnums.swift in Sources */,
+				03B402E0286C7E79001D8032 /* ProgressHUD.swift in Sources */,
 				0352790F286B135400A6CD9D /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

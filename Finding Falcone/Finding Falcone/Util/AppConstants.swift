@@ -14,4 +14,8 @@ struct AppConstants {
     static let accept = "Accept"
     static let applicationJson = "application/json"
     static let contentType = "content-type"
+    
+    static let progressHUDText = "Initializing Game"
+    
+    static let gameScreenNavControllerID = "GameScreenNavController"
 }

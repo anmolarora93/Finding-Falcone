@@ -28,7 +28,6 @@ class VehicleService {
         
         if let data = response?.data {
             let vehicle = try? decoder?.decode([Vehicle].self, from: data)
-            print(vehicle?.first?.speed)
             return vehicle
         }
         return nil

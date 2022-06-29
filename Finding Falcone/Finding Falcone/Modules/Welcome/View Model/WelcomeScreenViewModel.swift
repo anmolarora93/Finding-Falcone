@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 class WelcomeScreenViewModel {
     
@@ -14,6 +15,7 @@ class WelcomeScreenViewModel {
     private var tokenService: TokenService
     private var planetService: PlanetService
     private var vehicleService: VehicleService
+    @Published var isDataProcessed: Bool?
     
     init() {
         self.keychainManager = KeyChainManager.shared
@@ -28,6 +30,7 @@ class WelcomeScreenViewModel {
             await self.fetchToken()
             await self.fetchPlanets()
             await self.fetchVehicles()
+            self.isDataProcessed = true
         }
     }
     

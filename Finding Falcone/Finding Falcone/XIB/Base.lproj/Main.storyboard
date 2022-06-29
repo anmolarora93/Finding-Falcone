@@ -11,7 +11,7 @@
         <!--Finding Falcone!-->
         <scene sceneID="DZp-1M-u5V">
             <objects>
-                <viewController id="NQL-Ni-C0S" customClass="HomeScreenViewController" customModule="Finding_Falcone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeScreenViewController" id="NQL-Ni-C0S" customClass="HomeScreenViewController" customModule="Finding_Falcone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ERQ-Aw-3Ab">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -233,7 +233,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hSG-cW-PD4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zau-Hy-SNr" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="GameScreenNavController" automaticallyAdjustsScrollViewInsets="NO" id="zau-Hy-SNr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="t0s-uZ-bWx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
