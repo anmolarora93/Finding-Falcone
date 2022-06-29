@@ -7,10 +7,6 @@
 
 import Foundation
 
-class Vehicles: Codable {
-    var vehicles: [Vehicles]
-}
-
 class Vehicle: Codable {
     var name: String?
     var totalNumber: Int?
@@ -20,6 +16,7 @@ class Vehicle: Codable {
 
 extension Vehicle {
     enum CodingKeys: String, CodingKey {
+        case name, speed
         case totalNumber = "total_no"
         case maxDistance = "max_distance"
     }

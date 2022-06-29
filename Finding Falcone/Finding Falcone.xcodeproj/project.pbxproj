@@ -25,6 +25,13 @@
 		03527920286B279200A6CD9D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0352791F286B279200A6CD9D /* Token.swift */; };
 		03527923286B2AB200A6CD9D /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03527922286B2AB200A6CD9D /* AppError.swift */; };
 		03527925286B2D8800A6CD9D /* AppEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03527924286B2D8800A6CD9D /* AppEnums.swift */; };
+		03527928286B2F8A00A6CD9D /* PlanetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03527927286B2F8A00A6CD9D /* PlanetService.swift */; };
+		0352792E286B3FF100A6CD9D /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0352792D286B3FF100A6CD9D /* WelcomeScreenViewController.swift */; };
+		03527931286B479A00A6CD9D /* WelcomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03527930286B479A00A6CD9D /* WelcomeScreenViewModel.swift */; };
+		03B402D6286C647E001D8032 /* VehicleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402D5286C647E001D8032 /* VehicleService.swift */; };
+		03B402D8286C67D7001D8032 /* TokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402D7286C67D7001D8032 /* TokenService.swift */; };
+		03B402DC286C6BCA001D8032 /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402DB286C6BCA001D8032 /* KeyChainManager.swift */; };
+		03B402DE286C6C75001D8032 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402DD286C6C75001D8032 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +74,13 @@
 		0352791F286B279200A6CD9D /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		03527922286B2AB200A6CD9D /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		03527924286B2D8800A6CD9D /* AppEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnums.swift; sourceTree = "<group>"; };
+		03527927286B2F8A00A6CD9D /* PlanetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetService.swift; sourceTree = "<group>"; };
+		0352792D286B3FF100A6CD9D /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
+		03527930286B479A00A6CD9D /* WelcomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewModel.swift; sourceTree = "<group>"; };
+		03B402D5286C647E001D8032 /* VehicleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleService.swift; sourceTree = "<group>"; };
+		03B402D7286C67D7001D8032 /* TokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenService.swift; sourceTree = "<group>"; };
+		03B402DB286C6BCA001D8032 /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
+		03B402DD286C6C75001D8032 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,10 +131,10 @@
 		035278D4286B0FDB00A6CD9D /* Finding Falcone */ = {
 			isa = PBXGroup;
 			children = (
+				03527926286B2F4B00A6CD9D /* Modules */,
 				03527921286B2AA800A6CD9D /* Util */,
 				035278D5286B0FDB00A6CD9D /* AppDelegate.swift */,
 				0352790B286B111600A6CD9D /* Data */,
-				0352790C286B133300A6CD9D /* Home */,
 				0352790A286B110F00A6CD9D /* Misc */,
 				03527915286B23BA00A6CD9D /* Network */,
 				03527909286B110A00A6CD9D /* XIB */,
@@ -214,8 +228,55 @@
 			children = (
 				03527922286B2AB200A6CD9D /* AppError.swift */,
 				03527924286B2D8800A6CD9D /* AppEnums.swift */,
+				03B402DB286C6BCA001D8032 /* KeyChainManager.swift */,
+				03B402DD286C6C75001D8032 /* AppConstants.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		03527926286B2F4B00A6CD9D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0352792B286B3FCE00A6CD9D /* Welcome */,
+				0352790C286B133300A6CD9D /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0352792A286B327200A6CD9D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				03527927286B2F8A00A6CD9D /* PlanetService.swift */,
+				03B402D5286C647E001D8032 /* VehicleService.swift */,
+				03B402D7286C67D7001D8032 /* TokenService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0352792B286B3FCE00A6CD9D /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				0352792A286B327200A6CD9D /* Service */,
+				0352792F286B478D00A6CD9D /* View Model */,
+				0352792C286B3FD900A6CD9D /* View */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		0352792C286B3FD900A6CD9D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0352792D286B3FF100A6CD9D /* WelcomeScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0352792F286B478D00A6CD9D /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				03527930286B479A00A6CD9D /* WelcomeScreenViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,14 +410,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03B402DE286C6C75001D8032 /* AppConstants.swift in Sources */,
+				03B402D6286C647E001D8032 /* VehicleService.swift in Sources */,
 				03527917286B23C800A6CD9D /* NetworkManager.swift in Sources */,
 				03527920286B279200A6CD9D /* Token.swift in Sources */,
+				03527931286B479A00A6CD9D /* WelcomeScreenViewModel.swift in Sources */,
 				0352791A286B25A900A6CD9D /* Planets.swift in Sources */,
 				03527911286B1EE900A6CD9D /* SetParamsForSearchTableViewCell.swift in Sources */,
 				035278D6286B0FDB00A6CD9D /* AppDelegate.swift in Sources */,
+				0352792E286B3FF100A6CD9D /* WelcomeScreenViewController.swift in Sources */,
+				03527928286B2F8A00A6CD9D /* PlanetService.swift in Sources */,
 				0352791C286B25E200A6CD9D /* Vehicles.swift in Sources */,
 				035278E0286B0FDB00A6CD9D /* Finding_Falcone.xcdatamodeld in Sources */,
 				0352791E286B26E700A6CD9D /* FindingFalcone.swift in Sources */,
+				03B402D8286C67D7001D8032 /* TokenService.swift in Sources */,
+				03B402DC286C6BCA001D8032 /* KeyChainManager.swift in Sources */,
 				03527923286B2AB200A6CD9D /* AppError.swift in Sources */,
 				03527913286B232500A6CD9D /* CoreDataManager.swift in Sources */,
 				03527925286B2D8800A6CD9D /* AppEnums.swift in Sources */,

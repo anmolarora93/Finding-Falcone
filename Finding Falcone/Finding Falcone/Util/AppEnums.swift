@@ -32,9 +32,9 @@ enum Requests {
     var requestType: RequestType {
         switch self {
         case .fetchToken, .findFalcone:
-            return .GET
-        case .fetchPlanets, .fetchVehicles:
             return .POST
+        case .fetchPlanets, .fetchVehicles:
+            return .GET
         }
     }
 }

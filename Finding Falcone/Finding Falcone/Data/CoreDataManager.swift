@@ -7,7 +7,9 @@
 
 import CoreData
 
-class CoreDataManager {
+final class CoreDataManager {
+    
+    static let shared = CoreDataManager()
     
     private init() {}
     
@@ -42,7 +44,7 @@ class CoreDataManager {
 
     // MARK: - Core Data Saving support
 
-    func saveContext () {
+    private func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
@@ -54,5 +56,26 @@ class CoreDataManager {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    func getContext() -> NSManagedObjectContext? {
+        self.persistentContainer.viewContext
+    }
+    
+    private func entityDescription<T:NSManagedObject>(entity: T.Type) -> NSEntityDescription? {
+        guard let moc = getContext() else { return nil }
+        let entityDesc = NSEntityDescription.entity(forEntityName: String(describing: entity), in: moc)
+        return entityDesc
+    }
+    
+    func saveMainContext() {
+        self.saveContext()
+    }
+    
+    func createEntity<T: NSManagedObject>(entity: T.Type) -> NSManagedObject? {
+        guard let entityDesc = self.entityDescription(entity: entity) else { return nil }
+        let createdEntity = NSManagedObject.init(entity: entityDesc, insertInto: self.getContext())
+        self.saveMainContext()
+        return createdEntity
     }
 }

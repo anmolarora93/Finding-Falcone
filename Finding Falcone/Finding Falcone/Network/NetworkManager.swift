@@ -15,11 +15,13 @@ final class NetworkManager {
     
     private var session: URLSession?
     
-    private init() {}
+    private init() {
+        self.session = URLSession(configuration: .default)
+    }
     
-    func makeRequest(url: URL) async -> NetworkRequestResponse {
+    func makeRequest(urlRequest: URLRequest) async -> NetworkRequestResponse {
         do {
-            let response: Response? = try await session?.data(from: url)
+            let response: Response? = try await session?.data(for: urlRequest)
             if let urlResponse = response?.urlResponse as? HTTPURLResponse {
                 if 200...209 ~= urlResponse.statusCode {
                     return (response?.data, nil)
