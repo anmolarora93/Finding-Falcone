@@ -11,12 +11,23 @@ class HomeScreenViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView?
     
-    let sectionHeaders: [String] = ["Destination 1",
-                                    "Destination 2",
-                                    "Destination 3",
-                                    "Destination 4"]
+    private var viewModel: HomeScreenViewModel?
+    let sectionHeaders: [String] = AppConstants.sectionHeaders
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.bindViewModel()
+        self.homeScreenLoaded()
+    }
+}
+
+extension HomeScreenViewController {
+    func bindViewModel() {
+        self.viewModel = HomeScreenViewModel()
+    }
+    
+    func homeScreenLoaded() {
+        self.viewModel?.homeScreenDidLoad()
     }
 }
 

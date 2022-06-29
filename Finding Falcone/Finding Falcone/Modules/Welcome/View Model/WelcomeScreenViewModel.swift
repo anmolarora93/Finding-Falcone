@@ -15,6 +15,7 @@ class WelcomeScreenViewModel {
     private var tokenService: TokenService
     private var planetService: PlanetService
     private var vehicleService: VehicleService
+    @Published var isDataPresentLocally: Bool?
     @Published var isDataProcessed: Bool?
     
     init() {
@@ -26,12 +27,32 @@ class WelcomeScreenViewModel {
     }
     
     func startGame() {
-        Task(priority: .medium) {
-            await self.fetchToken()
-            await self.fetchPlanets()
-            await self.fetchVehicles()
-            self.isDataProcessed = true
+        if !self.checkIfDataExists() {
+            Task(priority: .medium) {
+                await self.fetchToken()
+                await self.fetchPlanets()
+                await self.fetchVehicles()
+                self.isDataProcessed = true
+            }
+        } else {
+            self.isDataPresentLocally = true
         }
+    }
+    
+    private func checkIfDataExists() -> Bool {
+        return isUserAuthenticated() && isPlanetsDataPresent() && isVehicleDataPresent()
+    }
+    
+    private func isUserAuthenticated() -> Bool {
+        UserDefaultsManager.isUserAuthenticated
+    }
+    
+    private func isPlanetsDataPresent() -> Bool {
+        self.coreDataManager.fetchAllRecordsForEntity(entity: ManagedPlanet.self)?.count == 6
+    }
+    
+    private func isVehicleDataPresent() -> Bool {
+        self.coreDataManager.fetchAllRecordsForEntity(entity: ManagedVehicle.self)?.count == 4
     }
     
     // MARK: - Token
@@ -43,6 +64,7 @@ class WelcomeScreenViewModel {
     private func saveToken(token: Token?) {
         guard let token = token, let tokenData = token.token.data(using: .utf8) else { return }
         self.keychainManager.save(tokenData)
+        UserDefaultsManager.isUserAuthenticated = true
     }
     
     // MARK: - Planets

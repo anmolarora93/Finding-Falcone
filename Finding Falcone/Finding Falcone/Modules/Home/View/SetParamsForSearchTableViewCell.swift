@@ -10,9 +10,18 @@ import UIKit
 class SetParamsForSearchTableViewCell: UITableViewCell {
 
     @IBOutlet weak var selectDestinationLabel: UILabel!
-    @IBOutlet weak var selectDestinationPickerView: UIPickerView?
+    @IBOutlet weak var selectedDestinationNameLabel: UILabel?
+    @IBOutlet weak var separatorView: UIView?
     @IBOutlet weak var selectVehicleLabel: UILabel!
-    @IBOutlet weak var selectVehiclePickerView: UIPickerView?
+    @IBOutlet weak var selectedVehicleNameLabel: UILabel?
+    
+    @IBAction func selectDestinationButtonPressed() {
+        
+    }
+    
+    @IBAction func selectVehicleButtonPressed() {
+        
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

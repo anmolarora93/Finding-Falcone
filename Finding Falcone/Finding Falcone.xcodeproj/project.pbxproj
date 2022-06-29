@@ -33,6 +33,11 @@
 		03B402DC286C6BCA001D8032 /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402DB286C6BCA001D8032 /* KeyChainManager.swift */; };
 		03B402DE286C6C75001D8032 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402DD286C6C75001D8032 /* AppConstants.swift */; };
 		03B402E0286C7E79001D8032 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402DF286C7E79001D8032 /* ProgressHUD.swift */; };
+		03B402E3286C8EE9001D8032 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402E2286C8EE9001D8032 /* HomeScreenViewModel.swift */; };
+		03B402E6286C8F06001D8032 /* FindFalconeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402E5286C8F06001D8032 /* FindFalconeService.swift */; };
+		03B402E9286C9458001D8032 /* HomeScreenViewModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402E8286C9458001D8032 /* HomeScreenViewModelData.swift */; };
+		03B402EB286C9F36001D8032 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402EA286C9F36001D8032 /* Storage.swift */; };
+		03B402ED286CA028001D8032 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402EC286CA028001D8032 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +88,11 @@
 		03B402DB286C6BCA001D8032 /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
 		03B402DD286C6C75001D8032 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		03B402DF286C7E79001D8032 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		03B402E2286C8EE9001D8032 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		03B402E5286C8F06001D8032 /* FindFalconeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFalconeService.swift; sourceTree = "<group>"; };
+		03B402E8286C9458001D8032 /* HomeScreenViewModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModelData.swift; sourceTree = "<group>"; };
+		03B402EA286C9F36001D8032 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		03B402EC286CA028001D8032 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +202,9 @@
 		0352790C286B133300A6CD9D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				03B402E7286C8F60001D8032 /* Model */,
+				03B402E4286C8EF7001D8032 /* Service */,
+				03B402E1286C8ED8001D8032 /* ViewModel */,
 				0352790D286B133900A6CD9D /* View */,
 			);
 			path = Home;
@@ -233,6 +246,8 @@
 				03B402DB286C6BCA001D8032 /* KeyChainManager.swift */,
 				03B402DD286C6C75001D8032 /* AppConstants.swift */,
 				03B402DF286C7E79001D8032 /* ProgressHUD.swift */,
+				03B402EA286C9F36001D8032 /* Storage.swift */,
+				03B402EC286CA028001D8032 /* UserDefaultsManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -280,6 +295,30 @@
 				03527930286B479A00A6CD9D /* WelcomeScreenViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		03B402E1286C8ED8001D8032 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				03B402E2286C8EE9001D8032 /* HomeScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		03B402E4286C8EF7001D8032 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				03B402E5286C8F06001D8032 /* FindFalconeService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		03B402E7286C8F60001D8032 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03B402E8286C9458001D8032 /* HomeScreenViewModelData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,11 +456,15 @@
 				03B402D6286C647E001D8032 /* VehicleService.swift in Sources */,
 				03527917286B23C800A6CD9D /* NetworkManager.swift in Sources */,
 				03527920286B279200A6CD9D /* Token.swift in Sources */,
+				03B402E9286C9458001D8032 /* HomeScreenViewModelData.swift in Sources */,
+				03B402EB286C9F36001D8032 /* Storage.swift in Sources */,
 				03527931286B479A00A6CD9D /* WelcomeScreenViewModel.swift in Sources */,
 				0352791A286B25A900A6CD9D /* Planets.swift in Sources */,
 				03527911286B1EE900A6CD9D /* SetParamsForSearchTableViewCell.swift in Sources */,
 				035278D6286B0FDB00A6CD9D /* AppDelegate.swift in Sources */,
 				0352792E286B3FF100A6CD9D /* WelcomeScreenViewController.swift in Sources */,
+				03B402ED286CA028001D8032 /* UserDefaultsManager.swift in Sources */,
+				03B402E6286C8F06001D8032 /* FindFalconeService.swift in Sources */,
 				03527928286B2F8A00A6CD9D /* PlanetService.swift in Sources */,
 				0352791C286B25E200A6CD9D /* Vehicles.swift in Sources */,
 				035278E0286B0FDB00A6CD9D /* Finding_Falcone.xcdatamodeld in Sources */,
@@ -429,6 +472,7 @@
 				03B402D8286C67D7001D8032 /* TokenService.swift in Sources */,
 				03B402DC286C6BCA001D8032 /* KeyChainManager.swift in Sources */,
 				03527923286B2AB200A6CD9D /* AppError.swift in Sources */,
+				03B402E3286C8EE9001D8032 /* HomeScreenViewModel.swift in Sources */,
 				03527913286B232500A6CD9D /* CoreDataManager.swift in Sources */,
 				03527925286B2D8800A6CD9D /* AppEnums.swift in Sources */,
 				03B402E0286C7E79001D8032 /* ProgressHUD.swift in Sources */,

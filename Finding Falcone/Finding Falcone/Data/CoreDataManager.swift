@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import os.log
 
 final class CoreDataManager {
     
@@ -77,5 +78,51 @@ final class CoreDataManager {
         let createdEntity = NSManagedObject.init(entity: entityDesc, insertInto: self.getContext())
         self.saveMainContext()
         return createdEntity
+    }
+    
+    func fetchEntity<T: NSManagedObject>(entity: T.Type, predicate: NSPredicate? = nil, sortDescriptor: [NSSortDescriptor]? = nil) -> T? {
+        let context = self.getContext()
+        let entityName: String = String(describing: entity)
+        let fetchRequest = NSFetchRequest<T>(entityName: entityName)
+        
+        if predicate != nil {
+            fetchRequest.predicate = predicate
+        }
+        
+        if sortDescriptor != nil {
+            fetchRequest.sortDescriptors = sortDescriptor
+        }
+        
+        fetchRequest.returnsObjectsAsFaults = false
+        do {
+            let searchResult = try context?.fetch(fetchRequest)
+            return searchResult?.count ?? -1 > 0 ? searchResult?.first : nil
+        } catch {
+            os_log("Error: %@", type: .error, error.localizedDescription)
+            return nil
+        }
+    }
+    
+    func fetchAllRecordsForEntity<T: NSManagedObject>(entity: T.Type, predicate: NSPredicate? = nil, sortDescriptor: [NSSortDescriptor]? = nil) -> [T]? {
+        let context = self.getContext()
+        let entityName: String = String(describing: entity)
+        let fetchRequest = NSFetchRequest<T>(entityName: entityName)
+        
+        if predicate != nil {
+            fetchRequest.predicate = predicate
+        }
+        
+        if sortDescriptor != nil {
+            fetchRequest.sortDescriptors = sortDescriptor
+        }
+        
+        fetchRequest.returnsObjectsAsFaults = false
+        do {
+            let searchResult = try context?.fetch(fetchRequest)
+            return searchResult?.count ?? -1 > 0 ? searchResult : nil
+        } catch {
+            os_log("Error: %@", type: .error, error.localizedDescription)
+            return nil
+        }
     }
 }
