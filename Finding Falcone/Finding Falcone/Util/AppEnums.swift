@@ -38,3 +38,14 @@ enum Requests {
         }
     }
 }
+
+enum PickerType {
+    case selectDestination
+    case selectVehicle
+}
+
+enum ResponseStatus: String {
+    case success
+    case failure = "false"
+    case error = "error"
+}

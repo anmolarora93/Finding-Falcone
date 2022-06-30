@@ -31,12 +31,15 @@ class WelcomeScreenViewController: UIViewController {
 private extension WelcomeScreenViewController {
     func bindViewModel() {
         self.viewModel = WelcomeScreenViewModel()
-        self.viewModel?.$isDataProcessed.sink(receiveValue: { (isDataProcessed) in
-            if isDataProcessed ?? false {
-                DispatchQueue.main.async {
-                    self.removeSpinnerView()
-                    self.presentGameScreen()
-                }
+        self.viewModel?.$isDataPresentLocally.sink(receiveValue: {
+            if $0 ?? false {
+                self.presentGameScreen()
+            }
+        }).store(in: &cancellables)
+        
+        self.viewModel?.$isDataProcessed.sink(receiveValue: {
+            if $0 ?? false {
+                self.presentGameScreen()
             }
         }).store(in: &cancellables)
     }
@@ -61,11 +64,18 @@ private extension WelcomeScreenViewController {
         progressHUD.removeFromSuperview()
     }
     
-    func presentGameScreen() {
+    func presentGameScreenVC() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let gameScreenNavController = storyboard.instantiateViewController(withIdentifier: AppConstants.gameScreenNavControllerID) as? UINavigationController {
             gameScreenNavController.modalPresentationStyle = .fullScreen
             self.present(gameScreenNavController, animated: true)
+        }
+    }
+    
+    func presentGameScreen() {
+        DispatchQueue.main.async {
+            self.removeSpinnerView()
+            self.presentGameScreenVC()
         }
     }
 }
