@@ -33,6 +33,16 @@
 		03B402DC286C6BCA001D8032 /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402DB286C6BCA001D8032 /* KeyChainManager.swift */; };
 		03B402DE286C6C75001D8032 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402DD286C6C75001D8032 /* AppConstants.swift */; };
 		03B402E0286C7E79001D8032 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402DF286C7E79001D8032 /* ProgressHUD.swift */; };
+		03B402E3286C8EE9001D8032 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402E2286C8EE9001D8032 /* HomeScreenViewModel.swift */; };
+		03B402E6286C8F06001D8032 /* FindFalconeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402E5286C8F06001D8032 /* FindFalconeService.swift */; };
+		03B402E9286C9458001D8032 /* HomeScreenViewModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402E8286C9458001D8032 /* HomeScreenViewModelData.swift */; };
+		03B402EB286C9F36001D8032 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402EA286C9F36001D8032 /* Storage.swift */; };
+		03B402ED286CA028001D8032 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402EC286CA028001D8032 /* UserDefaultsManager.swift */; };
+		03B402F0286CCACA001D8032 /* HomeScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402EF286CCACA001D8032 /* HomeScreenProtocols.swift */; };
+		03B402F4286CCBD8001D8032 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402F3286CCBD8001D8032 /* OptionsViewController.swift */; };
+		03B402F6286D959C001D8032 /* OptionsScreenViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B402F5286D959C001D8032 /* OptionsScreenViewData.swift */; };
+		03E03E7C286DD68A008D7E92 /* FindFalconeStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E03E7B286DD68A008D7E92 /* FindFalconeStatusViewController.swift */; };
+		03E03E7F286DE4A4008D7E92 /* FindFalconeStatusViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E03E7E286DE4A4008D7E92 /* FindFalconeStatusViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +93,16 @@
 		03B402DB286C6BCA001D8032 /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
 		03B402DD286C6C75001D8032 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		03B402DF286C7E79001D8032 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		03B402E2286C8EE9001D8032 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		03B402E5286C8F06001D8032 /* FindFalconeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFalconeService.swift; sourceTree = "<group>"; };
+		03B402E8286C9458001D8032 /* HomeScreenViewModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModelData.swift; sourceTree = "<group>"; };
+		03B402EA286C9F36001D8032 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		03B402EC286CA028001D8032 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		03B402EF286CCACA001D8032 /* HomeScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenProtocols.swift; sourceTree = "<group>"; };
+		03B402F3286CCBD8001D8032 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		03B402F5286D959C001D8032 /* OptionsScreenViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScreenViewData.swift; sourceTree = "<group>"; };
+		03E03E7B286DD68A008D7E92 /* FindFalconeStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFalconeStatusViewController.swift; sourceTree = "<group>"; };
+		03E03E7E286DE4A4008D7E92 /* FindFalconeStatusViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFalconeStatusViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +212,10 @@
 		0352790C286B133300A6CD9D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				03B402EE286CCAA9001D8032 /* Protocols */,
+				03B402E7286C8F60001D8032 /* Model */,
+				03B402E4286C8EF7001D8032 /* Service */,
+				03B402E1286C8ED8001D8032 /* ViewModel */,
 				0352790D286B133900A6CD9D /* View */,
 			);
 			path = Home;
@@ -233,6 +257,8 @@
 				03B402DB286C6BCA001D8032 /* KeyChainManager.swift */,
 				03B402DD286C6C75001D8032 /* AppConstants.swift */,
 				03B402DF286C7E79001D8032 /* ProgressHUD.swift */,
+				03B402EA286C9F36001D8032 /* Storage.swift */,
+				03B402EC286CA028001D8032 /* UserDefaultsManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -240,6 +266,8 @@
 		03527926286B2F4B00A6CD9D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				03E03E79286DD63C008D7E92 /* Result */,
+				03B402F1286CCBC0001D8032 /* Options */,
 				0352792B286B3FCE00A6CD9D /* Welcome */,
 				0352790C286B133300A6CD9D /* Home */,
 			);
@@ -280,6 +308,80 @@
 				03527930286B479A00A6CD9D /* WelcomeScreenViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		03B402E1286C8ED8001D8032 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				03B402E2286C8EE9001D8032 /* HomeScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		03B402E4286C8EF7001D8032 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				03B402E5286C8F06001D8032 /* FindFalconeService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		03B402E7286C8F60001D8032 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03B402E8286C9458001D8032 /* HomeScreenViewModelData.swift */,
+				03B402F5286D959C001D8032 /* OptionsScreenViewData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03B402EE286CCAA9001D8032 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				03B402EF286CCACA001D8032 /* HomeScreenProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		03B402F1286CCBC0001D8032 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				03B402F2286CCBC6001D8032 /* View */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		03B402F2286CCBC6001D8032 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03B402F3286CCBD8001D8032 /* OptionsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03E03E79286DD63C008D7E92 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				03E03E7D286DE490008D7E92 /* Model */,
+				03E03E7A286DD676008D7E92 /* View */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		03E03E7A286DD676008D7E92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03E03E7B286DD68A008D7E92 /* FindFalconeStatusViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03E03E7D286DE490008D7E92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03E03E7E286DE4A4008D7E92 /* FindFalconeStatusViewData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,15 +515,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E03E7F286DE4A4008D7E92 /* FindFalconeStatusViewData.swift in Sources */,
 				03B402DE286C6C75001D8032 /* AppConstants.swift in Sources */,
 				03B402D6286C647E001D8032 /* VehicleService.swift in Sources */,
+				03B402F0286CCACA001D8032 /* HomeScreenProtocols.swift in Sources */,
+				03B402F6286D959C001D8032 /* OptionsScreenViewData.swift in Sources */,
+				03E03E7C286DD68A008D7E92 /* FindFalconeStatusViewController.swift in Sources */,
 				03527917286B23C800A6CD9D /* NetworkManager.swift in Sources */,
 				03527920286B279200A6CD9D /* Token.swift in Sources */,
+				03B402E9286C9458001D8032 /* HomeScreenViewModelData.swift in Sources */,
+				03B402EB286C9F36001D8032 /* Storage.swift in Sources */,
 				03527931286B479A00A6CD9D /* WelcomeScreenViewModel.swift in Sources */,
 				0352791A286B25A900A6CD9D /* Planets.swift in Sources */,
 				03527911286B1EE900A6CD9D /* SetParamsForSearchTableViewCell.swift in Sources */,
 				035278D6286B0FDB00A6CD9D /* AppDelegate.swift in Sources */,
 				0352792E286B3FF100A6CD9D /* WelcomeScreenViewController.swift in Sources */,
+				03B402ED286CA028001D8032 /* UserDefaultsManager.swift in Sources */,
+				03B402E6286C8F06001D8032 /* FindFalconeService.swift in Sources */,
 				03527928286B2F8A00A6CD9D /* PlanetService.swift in Sources */,
 				0352791C286B25E200A6CD9D /* Vehicles.swift in Sources */,
 				035278E0286B0FDB00A6CD9D /* Finding_Falcone.xcdatamodeld in Sources */,
@@ -429,6 +539,8 @@
 				03B402D8286C67D7001D8032 /* TokenService.swift in Sources */,
 				03B402DC286C6BCA001D8032 /* KeyChainManager.swift in Sources */,
 				03527923286B2AB200A6CD9D /* AppError.swift in Sources */,
+				03B402F4286CCBD8001D8032 /* OptionsViewController.swift in Sources */,
+				03B402E3286C8EE9001D8032 /* HomeScreenViewModel.swift in Sources */,
 				03527913286B232500A6CD9D /* CoreDataManager.swift in Sources */,
 				03527925286B2D8800A6CD9D /* AppEnums.swift in Sources */,
 				03B402E0286C7E79001D8032 /* ProgressHUD.swift in Sources */,

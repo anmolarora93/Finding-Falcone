@@ -22,14 +22,9 @@ final class NetworkManager {
     func makeRequest(urlRequest: URLRequest) async -> NetworkRequestResponse {
         do {
             let response: Response? = try await session?.data(for: urlRequest)
-            if let urlResponse = response?.urlResponse as? HTTPURLResponse {
-                if 200...209 ~= urlResponse.statusCode {
-                    return (response?.data, nil)
-                }
-            }
+            return (response?.data, nil)
         } catch {
             return (nil, AppError(localizedDescription: error.localizedDescription))
         }
-        return (nil, AppError(localizedDescription: "Something Went Wrong"))
     }
 }
