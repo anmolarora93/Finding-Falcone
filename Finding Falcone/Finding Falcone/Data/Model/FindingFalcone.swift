@@ -7,30 +7,16 @@
 
 import Foundation
 
-class FindingFalconeResponse {
-    var success: Success?
-    var failure: Failure?
-    var error: Error?
-}
-
-class Success: Codable {
+class FindingFalconeResponse: Codable {
     var planetName: String
     var status: String?
+    var error: String?
 }
 
-extension Success {
+extension FindingFalconeResponse {
     enum CodingKeys: String, CodingKey {
         case planetName = "planet_name"
+        case status
+        case error
     }
 }
-
-class Failure: Codable {
-    var status: String
-}
-
-class Error: Codable {
-    var error: String
-}
-
-
-

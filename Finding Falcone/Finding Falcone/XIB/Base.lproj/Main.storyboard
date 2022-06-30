@@ -38,6 +38,9 @@
                                                 <integer key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="findFalconeButtonPressed" destination="NQL-Ni-C0S" eventType="touchUpInside" id="ziS-hn-1f8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,7 +67,7 @@
                                                     <rect key="frame" x="10" y="10" width="268" height="53.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qin-ek-FLz">
-                                                            <rect key="frame" x="0.0" y="0.0" width="211" height="53"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="218" height="53"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Destination" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHz-OH-V2t">
                                                                     <rect key="frame" x="0.0" y="0.0" width="166.5" height="27.5"/>
@@ -81,9 +84,9 @@
                                                             </subviews>
                                                         </stackView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF0-7l-aG9">
-                                                            <rect key="frame" x="216" y="0.0" width="52" height="53.5"/>
+                                                            <rect key="frame" x="223" y="0.0" width="45" height="53.5"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="sunrise.fill" catalog="system"/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="greaterthan.circle.fill" catalog="system"/>
                                                             <connections>
                                                                 <action selector="selectDestinationButtonPressed" destination="Ind-WG-Lhp" eventType="touchUpInside" id="WgV-GO-rTf"/>
                                                             </connections>
@@ -132,9 +135,9 @@
                                                             </constraints>
                                                         </stackView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvf-J0-Qji">
-                                                            <rect key="frame" x="221.5" y="0.0" width="46.5" height="53"/>
+                                                            <rect key="frame" x="223" y="0.0" width="45" height="53"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="airplane" catalog="system"/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="greaterthan.circle.fill" catalog="system"/>
                                                             <connections>
                                                                 <action selector="selectVehicleButtonPressed" destination="Ind-WG-Lhp" eventType="touchUpInside" id="Hxo-7L-SfG"/>
                                                             </connections>
@@ -198,6 +201,107 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hjw-F9-1Ao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1136.25" y="169.01408450704224"/>
+        </scene>
+        <!--Find Falcone Status View Controller-->
+        <scene sceneID="hhh-sd-05O">
+            <objects>
+                <viewController storyboardIdentifier="FindFalconeStatusViewController" id="l4S-tG-TOt" customClass="FindFalconeStatusViewController" customModule="Finding_Falcone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OHm-mJ-d3p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ZAg-U0-nVF">
+                                <rect key="frame" x="5" y="175" width="310" height="218"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtW-yZ-MkT">
+                                        <rect key="frame" x="110.5" y="0.0" width="89.5" height="41"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Taken" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KrJ-QQ-cRi">
+                                        <rect key="frame" x="103" y="66" width="104" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planet Found" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbu-H4-7YA">
+                                        <rect key="frame" x="94.5" y="118.5" width="121.5" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrf-7q-CuB">
+                                        <rect key="frame" x="86.5" y="171" width="137" height="47"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Start Over">
+                                                    <attributes>
+                                                        <font key="NSFont" size="24" name="AvenirNext-DemiBold"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="startOverButtonPressed" destination="l4S-tG-TOt" eventType="touchUpInside" id="O7H-il-Xmt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DIi-jG-srb"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="ZAg-U0-nVF" firstAttribute="centerY" secondItem="DIi-jG-srb" secondAttribute="centerY" id="4l0-wl-91h"/>
+                            <constraint firstItem="ZAg-U0-nVF" firstAttribute="leading" secondItem="DIi-jG-srb" secondAttribute="leading" constant="5" id="55R-kx-dCq"/>
+                            <constraint firstItem="ZAg-U0-nVF" firstAttribute="centerX" secondItem="DIi-jG-srb" secondAttribute="centerX" id="Nia-Br-jgJ"/>
+                            <constraint firstItem="DIi-jG-srb" firstAttribute="trailing" secondItem="ZAg-U0-nVF" secondAttribute="trailing" constant="5" id="PMA-kw-IjR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="planetFoundLabel" destination="Jbu-H4-7YA" id="o0D-vG-HFH"/>
+                        <outlet property="statusLabel" destination="MtW-yZ-MkT" id="K4x-gS-vDj"/>
+                        <outlet property="timeTakenLabel" destination="KrJ-QQ-cRi" id="tN1-Wc-64C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S5J-jX-BT8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1910.625" y="167.95774647887325"/>
+        </scene>
+        <!--Options View Controller-->
+        <scene sceneID="a3c-oE-mh0">
+            <objects>
+                <viewController storyboardIdentifier="OptionsViewController" id="fgs-3v-0Zf" customClass="OptionsViewController" customModule="Finding_Falcone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NvP-p3-oWE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MSl-dY-qy7">
+                                <rect key="frame" x="0.0" y="198" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fgs-3v-0Zf" id="QI1-uc-mcB"/>
+                                    <outlet property="delegate" destination="fgs-3v-0Zf" id="c4m-NX-Oa2"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zE7-21-De1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MSl-dY-qy7" firstAttribute="centerX" secondItem="zE7-21-De1" secondAttribute="centerX" id="V9X-Lr-2yn"/>
+                            <constraint firstItem="MSl-dY-qy7" firstAttribute="centerY" secondItem="zE7-21-De1" secondAttribute="centerY" id="exN-VY-gMR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1C0-VN-EMY"/>
+                    <connections>
+                        <outlet property="pickerView" destination="MSl-dY-qy7" id="Sb5-ZD-IMF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CsD-bk-kae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2131.875" y="903.16901408450701"/>
         </scene>
         <!--Welcome Screen View Controller-->
         <scene sceneID="CfC-c0-UfZ">
@@ -292,11 +396,28 @@
             </objects>
             <point key="canvasLocation" x="140.625" y="170.07042253521126"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Biz-Jz-hk1">
+            <objects>
+                <navigationController storyboardIdentifier="OptionsNavVC" automaticallyAdjustsScrollViewInsets="NO" id="zEw-ga-Rz2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="APm-27-mty">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fgs-3v-0Zf" kind="relationship" relationship="rootViewController" id="U6m-du-zEo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n1t-8g-fkJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134.375" y="903.16901408450701"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="airplane" catalog="system" width="128" height="115"/>
         <image name="falcone" width="150" height="150.5"/>
-        <image name="sunrise.fill" catalog="system" width="128" height="97"/>
+        <image name="greaterthan.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

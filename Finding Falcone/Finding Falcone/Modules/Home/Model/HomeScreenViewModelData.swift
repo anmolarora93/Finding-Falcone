@@ -11,6 +11,7 @@ class HomeScreenViewModelData {
     var planets: [PlanetViewData]?
     var vehicles: [VehicleViewData]?
     var token: String?
+    var totalTimeTaken: Int?
 }
 
 class PlanetViewData {
